@@ -1,0 +1,82 @@
+body {
+max-width: 1440px;
+width: 100%;
+min-height: 900px;
+background-color: white;
+}
+
+.grid {
+    display: flex;
+}
+
+/* ====== FOOTER STYLING ===== */
+.footer {
+    background-color: aqua;
+    min-height:146px;
+    display: flex;
+    align-content: center;
+}
+
+p {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 78px;
+    letter-spacing: 0em;
+    text-align: left;
+    color:bisque
+}
+
+/* ====== PARENT STYLING ===== */
+
+.grid__container1 {
+    height: 462px;
+    width: 896px;
+    background-color: aquamarine;
+    grid-gap: 24px red;
+    display: grid;
+    grid-gap: white;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.grid__container2 {
+    height: 414px;
+    width: 448px;
+    background-color: bisque;
+    grid-gap: 24px lightblue;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.grid__container3 {
+    height: 268px;
+    background-color:blueviolet;
+    grid-gap: 24px pink;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+
+/* ====== CHILDREN STYLING ===== */
+
+.grid__container1__item1 {
+    background-color: brown;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    grid-gap: 24px white;
+}
+
+.grid__container1__item2 {
+    background-color: rgb(195, 19, 19);
+    grid-row: 2/3;
+    grid-column: 1/2;
+    grid-gap: 24px white;
+}
+
+.grid__container1__item3 {
+    background-color: black;
+    grid-area: 1/3 ;   
+}
