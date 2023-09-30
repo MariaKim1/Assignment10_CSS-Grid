@@ -1,32 +1,44 @@
 body {
-max-width: 1440px;
-width: 100%;
-background-color: rgb(250, 250, 250);
+    max-width: 1440px;
+    width:100%;
+    height: 100vh;
+    margin: auto;
+    background-color: rgb(250, 250, 250);
 }
 
-section {
-    display: flex;
-}
 
-.grid {
+/*  .grid 
+	    display: flex;
+        flex-wrap: wrap;
+QUESTION 1: 
+        So my initial thought was to position the containers with flex after I had created the grid structure for the items. 
+        But the containers wont let me bcs the purple container goes behind the others. 
+        Why is this? I can't figure out why.. See CSS above this question. */
 
- /*   background-color: rgb(226, 233, 163);
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 2fr 1fr;   */
-}
+/*QUESTION 2: 
+        My second thought was to try and nest divs and make container2 a part of container1's third fr, if that makes sence..? 
+        But that didn't work out either. See commented out div in html. */
+
+/*  .container__position 
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 2fr 1fr;  
+QUESTION 3: 
+        My last atempt was to try and create a grid structure for the grid containers. This didn't really work either. 
+        It got a bit too messy and I started mixing up sections and divs and containers etc. 
+        So I thought I should just stop trying bcs there MUST be an easier more logical way. See commented out section in HTML + CSS above this question. */  
+
 
 /* ====== FOOTER STYLING ===== */
 .footer {
     background-color: aqua;
-    min-height: 146px;
-    /*display: flex;*/
+    padding: 20px;
     align-content: center;
 }
 
 p {
     font-family: 'Ubuntu', sans-serif;
     font-size: 64px;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 78px;
     letter-spacing: 0em;
     text-align: left;
@@ -41,10 +53,9 @@ p {
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 24px white;
 
-    min-height: 462px;
+    min-height: 414px;
     width: 896px;
-    
-    background-color: aquamarine;
+    background-color: rgb(253, 33, 33); /*only to visualise container - can be removed*/
 }
 
 .grid__container2 {
@@ -55,19 +66,17 @@ p {
     
     min-height: 414px;
     width: 448px;
-    
-    background-color: bisque;
+    background-color: rgb(11, 162, 6);
 }
 
 .grid__container3 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 24px pink;
-    order: 2;
 
-    min-height: 340px;
-
+    min-height: 268px;
+    width: 100%;
     background-color: blueviolet;
 }
 
