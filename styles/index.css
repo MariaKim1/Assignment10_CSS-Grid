@@ -1,19 +1,25 @@
 body {
 max-width: 1440px;
 width: 100%;
-min-height: 900px;
-background-color: white;
+background-color: rgb(250, 250, 250);
+}
+
+section {
+    display: flex;
 }
 
 .grid {
-    display: flex;
+
+ /*   background-color: rgb(226, 233, 163);
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;   */
 }
 
 /* ====== FOOTER STYLING ===== */
 .footer {
     background-color: aqua;
-    min-height:146px;
-    display: flex;
+    min-height: 146px;
+    /*display: flex;*/
     align-content: center;
 }
 
@@ -30,53 +36,110 @@ p {
 /* ====== PARENT STYLING ===== */
 
 .grid__container1 {
-    height: 462px;
-    width: 896px;
-    background-color: aquamarine;
-    grid-gap: 24px red;
     display: grid;
-    grid-gap: white;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(2, 1fr);
+    grid-gap: 24px white;
+
+    min-height: 462px;
+    width: 896px;
+    
+    background-color: aquamarine;
 }
 
 .grid__container2 {
-    height: 414px;
-    width: 448px;
-    background-color: bisque;
-    grid-gap: 24px lightblue;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
+    grid-gap: 24px lightblue;    
+    
+    min-height: 414px;
+    width: 448px;
+    
+    background-color: bisque;
 }
 
 .grid__container3 {
-    height: 268px;
-    background-color:blueviolet;
-    grid-gap: 24px pink;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(2, 1fr);
+    grid-gap: 24px pink;
+    order: 2;
+
+    min-height: 340px;
+
+    background-color: blueviolet;
 }
 
 
-/* ====== CHILDREN STYLING ===== */
+/* ====== CHILDREN CONTAINER 1 ===== */
 
 .grid__container1__item1 {
     background-color: brown;
     grid-row: 1/2;
     grid-column: 1/2;
-    grid-gap: 24px white;
 }
 
 .grid__container1__item2 {
     background-color: rgb(195, 19, 19);
     grid-row: 2/3;
     grid-column: 1/2;
-    grid-gap: 24px white;
 }
 
 .grid__container1__item3 {
-    background-color: black;
-    grid-area: 1/3 ;   
+    background-color: rgb(234, 114, 114);
+    grid-row: 1/3;
+    grid-column: 2/3;
+}
+
+/* ====== CHILDREN CONTAINER 2 ===== */
+
+.grid__container2__item4 {
+    background-color: rgb(204, 234, 114);
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+.grid__container2__item5 {
+    background-color: rgb(140, 180, 18);
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+
+.grid__container2__item6 {
+    background-color: rgb(91, 114, 21);
+    grid-row: 3/4;
+    grid-column: 1/2;
+}
+
+/* ====== CHILDREN CONTAINER 3 ===== */
+
+.grid__container3__item7 {
+    background-color: rgb(129, 81, 211);
+    grid-row: 1/3;
+    grid-column: 1/3;
+}
+
+.grid__container3__item8 {
+    background-color: rgb(180, 146, 240);
+    grid-row: 1/2;
+    grid-column: 3/4;
+}
+
+.grid__container3__item9 {
+    background-color: rgb(73, 57, 100);
+    grid-row: 2/3;
+    grid-column: 3/4;
+}
+
+.grid__container3__item10 {
+    background-color: rgb(179, 155, 219);
+    grid-row: 1/3;
+    grid-column: 4/6;
+}
+
+.grid__container3__item11 {
+    background-color: rgb(68, 11, 167);
+    grid-row: 1/3;
+    grid-column: 6/7;
 }
